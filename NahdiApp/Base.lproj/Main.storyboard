@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qxO-9d-vbe">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -42,6 +43,9 @@
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" red="0.29026950537479163" green="0.30941348337718688" blue="0.33818409974093266" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="mF3-ve-sbO" kind="show" id="zAn-8W-MC9"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© 2017 Nahdi Pharmaceuticals. All Rights reserved" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aw9-7o-uRa">
                                 <constraints>
@@ -144,15 +148,88 @@
                             <constraint firstItem="ML9-Yv-LYD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wP5-wq-kaS"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Nzd-sz-pXo"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-64.799999999999997" y="-210.94452773613196"/>
+            <point key="canvasLocation" x="1296.8" y="-213.64317841079463"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="Cfj-4J-OVF">
+            <objects>
+                <viewController id="mF3-ve-sbO" customClass="ProfileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HmJ-SD-L1g"/>
+                        <viewControllerLayoutGuide type="bottom" id="gls-Z3-A9I"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Quq-s1-wgm">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qKh-Sb-Lrx">
+                                <color key="backgroundColor" red="0.1165221716" green="0.6629785668" blue="0.4180257832" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KY7-Y8-pkM">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qKh-Sb-Lrx" firstAttribute="leading" secondItem="Quq-s1-wgm" secondAttribute="leading" id="6KU-Gm-vQt"/>
+                            <constraint firstItem="qKh-Sb-Lrx" firstAttribute="width" secondItem="Quq-s1-wgm" secondAttribute="width" multiplier="0.66" id="8As-65-War"/>
+                            <constraint firstItem="gls-Z3-A9I" firstAttribute="top" secondItem="KY7-Y8-pkM" secondAttribute="bottom" id="Tbt-Qi-pNN"/>
+                            <constraint firstItem="KY7-Y8-pkM" firstAttribute="leading" secondItem="Quq-s1-wgm" secondAttribute="leading" id="aJW-uJ-hiR"/>
+                            <constraint firstItem="qKh-Sb-Lrx" firstAttribute="height" secondItem="Quq-s1-wgm" secondAttribute="height" constant="-64" id="bO7-n7-IWg"/>
+                            <constraint firstItem="gls-Z3-A9I" firstAttribute="top" secondItem="qKh-Sb-Lrx" secondAttribute="bottom" id="j8y-WP-Dbh"/>
+                            <constraint firstItem="KY7-Y8-pkM" firstAttribute="top" secondItem="Quq-s1-wgm" secondAttribute="top" constant="64" id="tCA-dq-PfW"/>
+                            <constraint firstAttribute="trailing" secondItem="KY7-Y8-pkM" secondAttribute="trailing" id="ynd-5U-gs4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="iFA-0F-zpo">
+                        <barButtonItem key="leftBarButtonItem" image="ds_menu" id="BMl-8W-u8P">
+                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="slideButtonTapped:" destination="mF3-ve-sbO" id="Dix-2y-xnD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="profileView" destination="KY7-Y8-pkM" id="uia-eb-A91"/>
+                        <outlet property="profileViewTopConstraint" destination="tCA-dq-PfW" id="C6g-st-Aqo"/>
+                        <outlet property="slideView" destination="qKh-Sb-Lrx" id="Nx3-QS-Bzd"/>
+                        <outlet property="slideViewHeightConstraint" destination="bO7-n7-IWg" id="2uy-6D-C49"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q41-Rr-uCz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2098" y="-377"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="v3C-Y1-5b3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qxO-9d-vbe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hqE-Xj-cWi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="WaZ-nm-IoV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fxq-Rz-MeL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="357.60000000000002" y="-213.64317841079463"/>
         </scene>
     </scenes>
     <resources>
         <image name="background" width="375" height="667"/>
         <image name="contact_login" width="50" height="50"/>
+        <image name="ds_menu" width="48" height="48"/>
         <image name="location_login" width="50" height="50"/>
         <image name="more_login" width="50" height="50"/>
         <image name="nahdi-logo" width="172" height="110"/>
