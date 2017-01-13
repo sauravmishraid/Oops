@@ -171,19 +171,40 @@
                                 <color key="backgroundColor" red="0.1165221716" green="0.6629785668" blue="0.4180257832" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KY7-Y8-pkM">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="pHc-zs-wgW">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="pHc-zs-wgW" secondAttribute="height" multiplier="25:14" id="Qou-v4-KYh"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ds_profile_pic" translatesAutoresizingMaskIntoConstraints="NO" id="pDN-Vs-Xm7">
+                                        <frame key="frameInset" minX="46" minY="45" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="pDN-Vs-Xm7" secondAttribute="height" multiplier="1:1" id="KdE-c5-Wsp"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="pDN-Vs-Xm7" firstAttribute="centerY" secondItem="KY7-Y8-pkM" secondAttribute="centerY" id="0xI-Mv-SgI"/>
+                                    <constraint firstItem="pDN-Vs-Xm7" firstAttribute="leading" secondItem="KY7-Y8-pkM" secondAttribute="leading" constant="46" id="1Oq-jz-KRa"/>
+                                    <constraint firstAttribute="trailing" secondItem="pHc-zs-wgW" secondAttribute="trailing" id="GXV-2s-qsO"/>
+                                    <constraint firstItem="pHc-zs-wgW" firstAttribute="top" secondItem="KY7-Y8-pkM" secondAttribute="top" id="epC-FT-oCl"/>
+                                    <constraint firstItem="pDN-Vs-Xm7" firstAttribute="centerX" secondItem="pHc-zs-wgW" secondAttribute="centerX" id="hv8-6a-HAC"/>
+                                    <constraint firstItem="pHc-zs-wgW" firstAttribute="leading" secondItem="KY7-Y8-pkM" secondAttribute="leading" id="tHm-YL-0hy"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qKh-Sb-Lrx" firstAttribute="leading" secondItem="Quq-s1-wgm" secondAttribute="leading" id="6KU-Gm-vQt"/>
-                            <constraint firstItem="qKh-Sb-Lrx" firstAttribute="width" secondItem="Quq-s1-wgm" secondAttribute="width" multiplier="0.66" id="8As-65-War"/>
+                            <constraint firstItem="qKh-Sb-Lrx" firstAttribute="width" secondItem="Quq-s1-wgm" secondAttribute="width" multiplier="0.5" id="8As-65-War"/>
                             <constraint firstItem="gls-Z3-A9I" firstAttribute="top" secondItem="KY7-Y8-pkM" secondAttribute="bottom" id="Tbt-Qi-pNN"/>
                             <constraint firstItem="KY7-Y8-pkM" firstAttribute="leading" secondItem="Quq-s1-wgm" secondAttribute="leading" id="aJW-uJ-hiR"/>
-                            <constraint firstItem="qKh-Sb-Lrx" firstAttribute="height" secondItem="Quq-s1-wgm" secondAttribute="height" constant="-64" id="bO7-n7-IWg"/>
+                            <constraint firstItem="qKh-Sb-Lrx" firstAttribute="height" secondItem="Quq-s1-wgm" secondAttribute="height" id="bO7-n7-IWg"/>
                             <constraint firstItem="gls-Z3-A9I" firstAttribute="top" secondItem="qKh-Sb-Lrx" secondAttribute="bottom" id="j8y-WP-Dbh"/>
-                            <constraint firstItem="KY7-Y8-pkM" firstAttribute="top" secondItem="Quq-s1-wgm" secondAttribute="top" constant="64" id="tCA-dq-PfW"/>
+                            <constraint firstItem="KY7-Y8-pkM" firstAttribute="top" secondItem="Quq-s1-wgm" secondAttribute="top" id="tCA-dq-PfW"/>
                             <constraint firstAttribute="trailing" secondItem="KY7-Y8-pkM" secondAttribute="trailing" id="ynd-5U-gs4"/>
                         </constraints>
                     </view>
@@ -205,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q41-Rr-uCz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2098" y="-377"/>
+            <point key="canvasLocation" x="2088.8000000000002" y="-214.54272863568218"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="v3C-Y1-5b3">
@@ -230,6 +251,7 @@
         <image name="background" width="375" height="667"/>
         <image name="contact_login" width="50" height="50"/>
         <image name="ds_menu" width="48" height="48"/>
+        <image name="ds_profile_pic" width="100" height="100"/>
         <image name="location_login" width="50" height="50"/>
         <image name="more_login" width="50" height="50"/>
         <image name="nahdi-logo" width="172" height="110"/>
