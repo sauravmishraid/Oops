@@ -119,6 +119,13 @@
 {
     return @"Settings";
 }
+
+-(void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
+{
+    UITableViewHeaderFooterView * headerView = (UITableViewHeaderFooterView *)view;
+    headerView.textLabel.textColor = [UIColor whiteColor];
+    headerView.textLabel.textAlignment = NSTextAlignmentCenter;
+}
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *identifier = @"MenuTableViewIdentifier";
