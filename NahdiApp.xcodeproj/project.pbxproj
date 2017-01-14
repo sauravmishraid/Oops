@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15024BB61E2A86050048DF51 /* TouchIDAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 15024BB51E2A86050048DF51 /* TouchIDAuthentication.m */; };
+		15024BB91E2A87E60048DF51 /* TouchIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15024BB81E2A87E60048DF51 /* TouchIDViewController.m */; };
 		152A7C931E272B3500FECE33 /* ActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 152A7C921E272B3500FECE33 /* ActivityIndicator.m */; };
 		154B1F231E29EFFC00F2369A /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 154B1F221E29EFFC00F2369A /* MenuTableViewCell.m */; };
+		154EC29C1E2A698A00E0E6BC /* LocationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 154EC29B1E2A698A00E0E6BC /* LocationsViewController.m */; };
+		154EC29F1E2A6FF700E0E6BC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 154EC29E1E2A6FF700E0E6BC /* MapKit.framework */; };
+		156FBA8D1E2A59FF0096A63B /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FBA8C1E2A59FF0096A63B /* ContactUsViewController.m */; };
 		159E0E081E288D5200FD63CE /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 159E0E071E288D5200FD63CE /* ProfileViewController.m */; };
 		15FE07EE1E26BAB500C456D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FE07ED1E26BAB500C456D5 /* main.m */; };
 		15FE07F11E26BAB500C456D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FE07F01E26BAB500C456D5 /* AppDelegate.m */; };
@@ -38,10 +43,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15024BB41E2A86050048DF51 /* TouchIDAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchIDAuthentication.h; sourceTree = "<group>"; };
+		15024BB51E2A86050048DF51 /* TouchIDAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchIDAuthentication.m; sourceTree = "<group>"; };
+		15024BB71E2A87E60048DF51 /* TouchIDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchIDViewController.h; sourceTree = "<group>"; };
+		15024BB81E2A87E60048DF51 /* TouchIDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchIDViewController.m; sourceTree = "<group>"; };
 		152A7C911E272B3500FECE33 /* ActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityIndicator.h; sourceTree = "<group>"; };
 		152A7C921E272B3500FECE33 /* ActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityIndicator.m; sourceTree = "<group>"; };
 		154B1F211E29EFFC00F2369A /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewCell.h; sourceTree = "<group>"; };
 		154B1F221E29EFFC00F2369A /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewCell.m; sourceTree = "<group>"; };
+		154EC29A1E2A698A00E0E6BC /* LocationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationsViewController.h; sourceTree = "<group>"; };
+		154EC29B1E2A698A00E0E6BC /* LocationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationsViewController.m; sourceTree = "<group>"; };
+		154EC29E1E2A6FF700E0E6BC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		156FBA8B1E2A59FF0096A63B /* ContactUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactUsViewController.h; path = ../ContactUsViewController.h; sourceTree = "<group>"; };
+		156FBA8C1E2A59FF0096A63B /* ContactUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactUsViewController.m; path = ../ContactUsViewController.m; sourceTree = "<group>"; };
 		159E0E061E288D5200FD63CE /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		159E0E071E288D5200FD63CE /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		15FE07E91E26BAB500C456D5 /* NahdiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NahdiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				154EC29F1E2A6FF700E0E6BC /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +102,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		154EC29D1E2A6FF700E0E6BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				154EC29E1E2A6FF700E0E6BC /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		15FE07E01E26BAB500C456D5 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +117,7 @@
 				15FE08051E26BAB500C456D5 /* NahdiAppTests */,
 				15FE08101E26BAB500C456D5 /* NahdiAppUITests */,
 				15FE07EA1E26BAB500C456D5 /* Products */,
+				154EC29D1E2A6FF700E0E6BC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,14 +141,22 @@
 				15FE07F21E26BAB500C456D5 /* ViewController.h */,
 				15FE07F31E26BAB500C456D5 /* ViewController.m */,
 				15FE07F51E26BAB500C456D5 /* Main.storyboard */,
+				15024BB71E2A87E60048DF51 /* TouchIDViewController.h */,
+				15024BB81E2A87E60048DF51 /* TouchIDViewController.m */,
 				154B1F211E29EFFC00F2369A /* MenuTableViewCell.h */,
 				154B1F221E29EFFC00F2369A /* MenuTableViewCell.m */,
+				156FBA8B1E2A59FF0096A63B /* ContactUsViewController.h */,
+				156FBA8C1E2A59FF0096A63B /* ContactUsViewController.m */,
+				15024BB41E2A86050048DF51 /* TouchIDAuthentication.h */,
+				15024BB51E2A86050048DF51 /* TouchIDAuthentication.m */,
 				15FE07F81E26BAB500C456D5 /* Assets.xcassets */,
 				15FE07FA1E26BAB500C456D5 /* LaunchScreen.storyboard */,
 				15FE07FD1E26BAB500C456D5 /* Info.plist */,
 				15FE07EC1E26BAB500C456D5 /* Supporting Files */,
 				159E0E061E288D5200FD63CE /* ProfileViewController.h */,
 				159E0E071E288D5200FD63CE /* ProfileViewController.m */,
+				154EC29A1E2A698A00E0E6BC /* LocationsViewController.h */,
+				154EC29B1E2A698A00E0E6BC /* LocationsViewController.m */,
 			);
 			path = NahdiApp;
 			sourceTree = "<group>";
@@ -288,12 +320,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				156FBA8D1E2A59FF0096A63B /* ContactUsViewController.m in Sources */,
 				152A7C931E272B3500FECE33 /* ActivityIndicator.m in Sources */,
 				15FE07F41E26BAB500C456D5 /* ViewController.m in Sources */,
+				15024BB91E2A87E60048DF51 /* TouchIDViewController.m in Sources */,
 				15FE07F11E26BAB500C456D5 /* AppDelegate.m in Sources */,
 				15FE07EE1E26BAB500C456D5 /* main.m in Sources */,
 				154B1F231E29EFFC00F2369A /* MenuTableViewCell.m in Sources */,
 				159E0E081E288D5200FD63CE /* ProfileViewController.m in Sources */,
+				15024BB61E2A86050048DF51 /* TouchIDAuthentication.m in Sources */,
+				154EC29C1E2A698A00E0E6BC /* LocationsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

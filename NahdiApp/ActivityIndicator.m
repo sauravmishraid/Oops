@@ -6,7 +6,7 @@
 //
 
 #import "ActivityIndicator.h"
-
+#import "ContactUsViewController.h"
 
 @interface ActivityIndicator ()
 
@@ -69,7 +69,7 @@
 //Setting up the indicator view
 -(void)setUpIndicatorView
 {
- /*   self.activityIndicator= [[UIActivityIndicatorView alloc]initWithFrame:CGRectMake(0, 0, 50, 50)];
+    self.activityIndicator= [[UIActivityIndicatorView alloc]initWithFrame:CGRectMake(0, 0, 50, 50)];
     
     self.activityIndicator.layer.cornerRadius = 5;
     
@@ -81,56 +81,28 @@
     
     self.activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
     
-    [self.activityIndicator setColor:[UIColor colorWithRed:31.0/256.0 green:184.0/256.0 blue:250.0/256.0 alpha:1.0]];
+    [self.activityIndicator setColor:[UIColor greenColor]];
     
-    [self addSubview: self.activityIndicator];*/
-    
-    
-    
-    //Test
-    
-    //Create the first status image and the indicator view
-    UIImage *statusImage = [UIImage imageNamed:@"Loader-1"];
-    self.activityImageView = [[UIImageView alloc]
-                                      initWithImage:statusImage];
-    
-    
-    //Create an array with the image names.
-    
-    NSMutableArray *animationImageArray=[NSMutableArray new];
-    
-    for (int i=1; i<20; i++)
-    {
-        NSString *imageName = [NSString stringWithFormat:@"Loader-%d",i];
-        
-        UIImage *animationImage = [UIImage imageNamed:imageName];
-        
-        [animationImageArray addObject:animationImage];
-        
-    }
-    
-    
-    //Add more images which will be used for the animation
-    self.activityImageView.animationImages = animationImageArray;
-    
-    self.activityImageView.animationDuration = 0.5;
-    
-    self.activityImageView.center = self.center;
-    
-    [self addSubview:self.activityImageView];
-
+    [self addSubview: self.activityIndicator];
+ 
 }
 
--(void)startAnimatingInController:(id)parentControllerView
+-(void)startAnimatingInController:(UIViewController *)parentControllerView
 {
     
-    //[self.activityIndicator startAnimating];
-   //
+    [self.activityIndicator startAnimating];
     
-    [self.activityImageView startAnimating];
+    //[self.activityImageView startAnimating];
 
-    
-    [parentControllerView addSubview:self];
+        if([parentControllerView isKindOfClass:[ContactUsViewController class]])
+        {
+            ContactUsViewController *instancePassed =(ContactUsViewController *)parentControllerView;
+            [instancePassed.contactUsWebView addSubview:self];
+        }
+        else
+        {
+            [parentControllerView.view addSubview:self];
+        }
     
 }
 

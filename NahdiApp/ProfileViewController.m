@@ -6,8 +6,12 @@
 //  Copyright © 2017 Saurav  Mishra. All rights reserved.
 //
 
+@import UIKit;
 #import "ProfileViewController.h"
 #import "MenuTableViewCell.h"
+#import "LocationsViewController.h"
+#import "ContactUsViewController.h"
+#import "TouchIDAuthentication.h"
 
 @interface ProfileViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) IBOutlet UIView *profileView;
@@ -28,7 +32,6 @@
     // Do any additional setup after loading the view.
     self.navigationController.navigationBar.hidden = NO;
     [self addSlideGesture];
-    [self setupConstraints];
     self.menuTableView.delegate= self;
     self.menuTableView.dataSource = self;
 }
@@ -105,6 +108,10 @@
      }];
 }
 
+-(void)viewDidDisappear:(BOOL)animated
+{
+  //  self.profileViewTopConstraint.constant =self.slideViewHeightConstraint.constant=self.menuTableViewHeightConstraint.constant=0;
+}
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -160,4 +167,58 @@
     
     return cell;
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    switch (indexPath.row) {
+        case 0:
+        {
+            UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            ViewController * viewToPresent = [mainStoryBoard instantiateViewControllerWithIdentifier:@"TouchIDIdentifier"];
+            
+            [self presentViewController:viewToPresent animated:YES completion:nil];
+            break;
+        }
+        case 1:
+           
+            break;
+        case 2:
+        {
+            UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            ContactUsViewController * viewToPresent = [mainStoryBoard instantiateViewControllerWithIdentifier:@"contactUsIdentifier"];
+            viewToPresent.URLString = @"https://www.nahdi.sa/contact/";
+            [self presentViewController:viewToPresent animated:YES completion:nil];
+            break;
+        }
+        case 3:
+        {
+            UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            LocationsViewController * viewToPresent = [mainStoryBoard instantiateViewControllerWithIdentifier:@"mapViewIdentifier"];
+            [self presentViewController:viewToPresent animated:YES completion:nil];
+            break;
+        }
+        case 4:
+        {
+            UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            ViewController * viewToPresent = [mainStoryBoard instantiateViewControllerWithIdentifier:@"LoginViewControlleridentifier"];
+            
+            [self presentViewController:viewToPresent animated:YES completion:nil];
+
+        }
+            break;
+            
+        default:
+        break;
+    }
+    
+}
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (![[TouchIDAuthentication sharedInstance] doesDevichaveTouchID])
+    {   [cell setUserInteractionEnabled:NO];
+        cell.textLabel.textColor =[UIColor grayColor];
+    }
+    
+}
+
 @end
