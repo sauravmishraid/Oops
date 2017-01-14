@@ -7,15 +7,16 @@
 //
 
 #import "ProfileViewController.h"
+#import "MenuTableViewCell.h"
 
-@interface ProfileViewController ()
+@interface ProfileViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) IBOutlet UIView *profileView;
 @property (weak, nonatomic) IBOutlet UIView *slideView;
 //Constraints..
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *profileViewTopConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *slideViewHeightConstraint;
-
-
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *menuTableViewHeightConstraint;
+@property (weak, nonatomic) IBOutlet UITableView *menuTableView;
 @end
 
 @implementation ProfileViewController
@@ -28,12 +29,15 @@
     self.navigationController.navigationBar.hidden = NO;
     [self addSlideGesture];
     [self setupConstraints];
+    self.menuTableView.delegate= self;
+    self.menuTableView.dataSource = self;
 }
 
 -(void)setupConstraints
 {
     self.profileViewTopConstraint.constant =  NAVIGATIONBAR_HEIGHT;
     self.slideViewHeightConstraint.constant= -NAVIGATIONBAR_HEIGHT;
+    self.menuTableViewHeightConstraint.constant=-NAVIGATIONBAR_HEIGHT;
 }
 - (IBAction)slideButtonTapped:(UIBarButtonItem *)sender {
     
@@ -102,4 +106,51 @@
 }
 
 
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 5;
+    
+}
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return @"Settings";
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *identifier = @"MenuTableViewIdentifier";
+    MenuTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if(!cell)
+        cell = [[MenuTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    switch (indexPath.row) {
+        case 0:
+            cell.labelForMenu.text = @"Touch ID";
+            cell.menuImageView.image=[UIImage imageNamed:@"TouchID"];
+            break;
+        case 1:
+            cell.labelForMenu.text = @"Inbox";
+            cell.menuImageView.image=[UIImage imageNamed:@"mail_icon"];
+            break;
+        case 2:
+            cell.labelForMenu.text = @"Contact us";
+            cell.menuImageView.image=[UIImage imageNamed:@"contact_icon"];
+            break;
+        case 3:
+            cell.labelForMenu.text = @"Locations";
+            cell.menuImageView.image=[UIImage imageNamed:@"locations"];
+            break;
+        case 4:
+            cell.labelForMenu.text = @"Sign Out";
+            cell.menuImageView.image=[UIImage imageNamed:@"signout_icon"];
+            break;
+
+        default:
+            break;
+    }
+    
+    return cell;
+}
 @end
