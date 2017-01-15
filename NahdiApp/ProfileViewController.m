@@ -12,14 +12,20 @@
 #import "LocationsViewController.h"
 #import "ContactUsViewController.h"
 #import "TouchIDAuthentication.h"
+#import "UIAlertAction+AlertController.h"
+#import "CacheManager.h"
 
 @interface ProfileViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) IBOutlet UIView *profileView;
 @property (weak, nonatomic) IBOutlet UIView *slideView;
 //Constraints..
+@property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *profileViewTopConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *slideViewHeightConstraint;
+@property (weak, nonatomic) IBOutlet UIImageView *profileImage;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *menuTableViewHeightConstraint;
+
+@property (weak, nonatomic) IBOutlet UILabel *designationLabel;
 @property (weak, nonatomic) IBOutlet UITableView *menuTableView;
 @end
 
@@ -34,14 +40,24 @@
     [self addSlideGesture];
     self.menuTableView.delegate= self;
     self.menuTableView.dataSource = self;
+    NSString *userName = [CacheManager sharedInstance].userName;
+    if([userName isEqualToString:@"john"])
+    {
+        self.profileImage.image = [UIImage imageNamed:@"Federico"];
+        self.userNameLabel.text = @"John Stokes";
+        self.designationLabel.text = @"Supply Chain Director";
+    }
+    else if ([userName isEqualToString:@"james"])
+    {
+        self.profileImage.image = [UIImage imageNamed:@"James"];
+        self.userNameLabel.text = @"James Ahlum";
+        self.designationLabel.text = @"Warehouse Manager";
+    }
+    
+    
 }
 
--(void)setupConstraints
-{
-    self.profileViewTopConstraint.constant =  NAVIGATIONBAR_HEIGHT;
-    self.slideViewHeightConstraint.constant= -NAVIGATIONBAR_HEIGHT;
-    self.menuTableViewHeightConstraint.constant=-NAVIGATIONBAR_HEIGHT;
-}
+
 - (IBAction)slideButtonTapped:(UIBarButtonItem *)sender {
     
     (self.profileView.frame.origin.x == ORIGIN_X_POSITION) ? [self showMenu] : [self hideMenu];
@@ -110,7 +126,7 @@
 
 -(void)viewDidDisappear:(BOOL)animated
 {
-  //  self.profileViewTopConstraint.constant =self.slideViewHeightConstraint.constant=self.menuTableViewHeightConstraint.constant=0;
+  
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -119,7 +135,7 @@
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return 4;
     
 }
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -140,23 +156,23 @@
     if(!cell)
         cell = [[MenuTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     switch (indexPath.row) {
-        case 0:
+     /*   case 0:
             cell.labelForMenu.text = @"Touch ID";
             cell.menuImageView.image=[UIImage imageNamed:@"TouchID"];
-            break;
-        case 1:
+            break;*/
+        case 0:
             cell.labelForMenu.text = @"Inbox";
             cell.menuImageView.image=[UIImage imageNamed:@"mail_icon"];
             break;
-        case 2:
+        case 1:
             cell.labelForMenu.text = @"Contact us";
             cell.menuImageView.image=[UIImage imageNamed:@"contact_icon"];
             break;
-        case 3:
+        case 2:
             cell.labelForMenu.text = @"Locations";
             cell.menuImageView.image=[UIImage imageNamed:@"locations"];
             break;
-        case 4:
+        case 3:
             cell.labelForMenu.text = @"Sign Out";
             cell.menuImageView.image=[UIImage imageNamed:@"signout_icon"];
             break;
@@ -171,18 +187,22 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     switch (indexPath.row) {
-        case 0:
+      /*  case 0:
         {
             UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             ViewController * viewToPresent = [mainStoryBoard instantiateViewControllerWithIdentifier:@"TouchIDIdentifier"];
             
             [self presentViewController:viewToPresent animated:YES completion:nil];
             break;
+        }*/
+        case 0:
+        {
+            SEL okTappedFromAlert = NSSelectorFromString(@"okTappedFromAlert");
+            
+            [UIAlertAction alertControllerWithTitle:@"Message" Message:@"This feature is unavilable in the current version." andParent:self onSelector:okTappedFromAlert];
         }
-        case 1:
-           
             break;
-        case 2:
+        case 1:
         {
             UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             ContactUsViewController * viewToPresent = [mainStoryBoard instantiateViewControllerWithIdentifier:@"contactUsIdentifier"];
@@ -190,14 +210,14 @@
             [self presentViewController:viewToPresent animated:YES completion:nil];
             break;
         }
-        case 3:
+        case 2:
         {
             UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             LocationsViewController * viewToPresent = [mainStoryBoard instantiateViewControllerWithIdentifier:@"mapViewIdentifier"];
             [self presentViewController:viewToPresent animated:YES completion:nil];
             break;
         }
-        case 4:
+        case 3:
         {
             UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             ViewController * viewToPresent = [mainStoryBoard instantiateViewControllerWithIdentifier:@"LoginViewControlleridentifier"];
@@ -214,10 +234,10 @@
 }
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (![[TouchIDAuthentication sharedInstance] doesDevichaveTouchID])
+   /* if (![[TouchIDAuthentication sharedInstance] doesDevichaveTouchID])
     {   [cell setUserInteractionEnabled:NO];
         cell.textLabel.textColor =[UIColor grayColor];
-    }
+    }*/
     
 }
 

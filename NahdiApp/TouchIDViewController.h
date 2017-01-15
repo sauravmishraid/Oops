@@ -10,4 +10,6 @@
 
 @interface TouchIDViewController : UIViewController
 
+- (BOOL)showLoginOptionsToUser;
+
 @end

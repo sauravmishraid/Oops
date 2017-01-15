@@ -1,9 +1,6 @@
 //
 //  TouchIDAuthentication.m
-//  WebsterApp
 //
-//  Created by Saurav Mishra on 10/10/2015.
-//  Copyright © 2015 Infosys. All rights reserved.
 //
 
 #import "TouchIDAuthentication.h"
