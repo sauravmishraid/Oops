@@ -22,20 +22,16 @@
 		15FE07F41E26BAB500C456D5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FE07F31E26BAB500C456D5 /* ViewController.m */; };
 		15FE07F71E26BAB500C456D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15FE07F51E26BAB500C456D5 /* Main.storyboard */; };
 		15FE07F91E26BAB500C456D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15FE07F81E26BAB500C456D5 /* Assets.xcassets */; };
-		15FE07FC1E26BAB500C456D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15FE07FA1E26BAB500C456D5 /* LaunchScreen.storyboard */; };
 		15FE08071E26BAB500C456D5 /* NahdiAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FE08061E26BAB500C456D5 /* NahdiAppTests.m */; };
-		15FE08121E26BAB500C456D5 /* NahdiAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FE08111E26BAB500C456D5 /* NahdiAppUITests.m */; };
+		B6F705571E2C734B005B5E42 /* XYPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F705501E2C734B005B5E42 /* XYPieChart.m */; };
+		B6F705581E2C734B005B5E42 /* ChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F705521E2C734B005B5E42 /* ChartViewController.m */; };
+		B6F705591E2C734B005B5E42 /* ChartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6F705541E2C734B005B5E42 /* ChartTableViewCell.xib */; };
+		B6F7055A1E2C734B005B5E42 /* ChartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F705551E2C734B005B5E42 /* ChartTableViewCell.m */; };
+		B6F7055C1E2C73B8005B5E42 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6F7055B1E2C73B8005B5E42 /* Launch Screen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		15FE08031E26BAB500C456D5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 15FE07E11E26BAB500C456D5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 15FE07E81E26BAB500C456D5;
-			remoteInfo = NahdiApp;
-		};
-		15FE080E1E26BAB500C456D5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 15FE07E11E26BAB500C456D5 /* Project object */;
 			proxyType = 1;
@@ -72,14 +68,20 @@
 		15FE07F31E26BAB500C456D5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		15FE07F61E26BAB500C456D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		15FE07F81E26BAB500C456D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		15FE07FB1E26BAB500C456D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15FE07FD1E26BAB500C456D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15FE08021E26BAB500C456D5 /* NahdiAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NahdiAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15FE08061E26BAB500C456D5 /* NahdiAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NahdiAppTests.m; sourceTree = "<group>"; };
 		15FE08081E26BAB500C456D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		15FE080D1E26BAB500C456D5 /* NahdiAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NahdiAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15FE08111E26BAB500C456D5 /* NahdiAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NahdiAppUITests.m; sourceTree = "<group>"; };
 		15FE08131E26BAB500C456D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6F705501E2C734B005B5E42 /* XYPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XYPieChart.m; path = "Pie Chart/XYPieChart.m"; sourceTree = "<group>"; };
+		B6F705511E2C734B005B5E42 /* XYPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYPieChart.h; path = "Pie Chart/XYPieChart.h"; sourceTree = "<group>"; };
+		B6F705521E2C734B005B5E42 /* ChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChartViewController.m; path = "Pie Chart/ChartViewController.m"; sourceTree = "<group>"; };
+		B6F705531E2C734B005B5E42 /* ChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChartViewController.h; path = "Pie Chart/ChartViewController.h"; sourceTree = "<group>"; };
+		B6F705541E2C734B005B5E42 /* ChartTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ChartTableViewCell.xib; path = "Pie Chart/ChartTableViewCell.xib"; sourceTree = "<group>"; };
+		B6F705551E2C734B005B5E42 /* ChartTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChartTableViewCell.m; path = "Pie Chart/ChartTableViewCell.m"; sourceTree = "<group>"; };
+		B6F705561E2C734B005B5E42 /* ChartTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChartTableViewCell.h; path = "Pie Chart/ChartTableViewCell.h"; sourceTree = "<group>"; };
+		B6F7055B1E2C73B8005B5E42 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,13 +94,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		15FE07FF1E26BAB500C456D5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		15FE080A1E26BAB500C456D5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -132,7 +127,6 @@
 			children = (
 				15FE07E91E26BAB500C456D5 /* NahdiApp.app */,
 				15FE08021E26BAB500C456D5 /* NahdiAppTests.xctest */,
-				15FE080D1E26BAB500C456D5 /* NahdiAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,6 +134,7 @@
 		15FE07EB1E26BAB500C456D5 /* NahdiApp */ = {
 			isa = PBXGroup;
 			children = (
+				B6F7054F1E2C732E005B5E42 /* Pie Chart */,
 				152A7C911E272B3500FECE33 /* ActivityIndicator.h */,
 				152A7C921E272B3500FECE33 /* ActivityIndicator.m */,
 				15FE07EF1E26BAB500C456D5 /* AppDelegate.h */,
@@ -156,7 +151,6 @@
 				15024BB41E2A86050048DF51 /* TouchIDAuthentication.h */,
 				15024BB51E2A86050048DF51 /* TouchIDAuthentication.m */,
 				15FE07F81E26BAB500C456D5 /* Assets.xcassets */,
-				15FE07FA1E26BAB500C456D5 /* LaunchScreen.storyboard */,
 				15FE07FD1E26BAB500C456D5 /* Info.plist */,
 				15FE07EC1E26BAB500C456D5 /* Supporting Files */,
 				159E0E061E288D5200FD63CE /* ProfileViewController.h */,
@@ -167,6 +161,7 @@
 				154EC29B1E2A698A00E0E6BC /* LocationsViewController.m */,
 				15024BBA1E2B3DF10048DF51 /* CacheManager.h */,
 				15024BBB1E2B3DF10048DF51 /* CacheManager.m */,
+				B6F7055B1E2C73B8005B5E42 /* Launch Screen.xib */,
 			);
 			path = NahdiApp;
 			sourceTree = "<group>";
@@ -195,6 +190,20 @@
 				15FE08131E26BAB500C456D5 /* Info.plist */,
 			);
 			path = NahdiAppUITests;
+			sourceTree = "<group>";
+		};
+		B6F7054F1E2C732E005B5E42 /* Pie Chart */ = {
+			isa = PBXGroup;
+			children = (
+				B6F705501E2C734B005B5E42 /* XYPieChart.m */,
+				B6F705511E2C734B005B5E42 /* XYPieChart.h */,
+				B6F705521E2C734B005B5E42 /* ChartViewController.m */,
+				B6F705531E2C734B005B5E42 /* ChartViewController.h */,
+				B6F705541E2C734B005B5E42 /* ChartTableViewCell.xib */,
+				B6F705551E2C734B005B5E42 /* ChartTableViewCell.m */,
+				B6F705561E2C734B005B5E42 /* ChartTableViewCell.h */,
+			);
+			name = "Pie Chart";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,24 +244,6 @@
 			productReference = 15FE08021E26BAB500C456D5 /* NahdiAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		15FE080C1E26BAB500C456D5 /* NahdiAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 15FE081C1E26BAB500C456D5 /* Build configuration list for PBXNativeTarget "NahdiAppUITests" */;
-			buildPhases = (
-				15FE08091E26BAB500C456D5 /* Sources */,
-				15FE080A1E26BAB500C456D5 /* Frameworks */,
-				15FE080B1E26BAB500C456D5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				15FE080F1E26BAB500C456D5 /* PBXTargetDependency */,
-			);
-			name = NahdiAppUITests;
-			productName = NahdiAppUITests;
-			productReference = 15FE080D1E26BAB500C456D5 /* NahdiAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -267,11 +258,6 @@
 						ProvisioningStyle = Automatic;
 					};
 					15FE08011E26BAB500C456D5 = {
-						CreatedOnToolsVersion = 8.0;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 15FE07E81E26BAB500C456D5;
-					};
-					15FE080C1E26BAB500C456D5 = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 15FE07E81E26BAB500C456D5;
@@ -293,7 +279,6 @@
 			targets = (
 				15FE07E81E26BAB500C456D5 /* NahdiApp */,
 				15FE08011E26BAB500C456D5 /* NahdiAppTests */,
-				15FE080C1E26BAB500C456D5 /* NahdiAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -303,20 +288,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15FE07FC1E26BAB500C456D5 /* LaunchScreen.storyboard in Resources */,
+				B6F705591E2C734B005B5E42 /* ChartTableViewCell.xib in Resources */,
+				B6F7055C1E2C73B8005B5E42 /* Launch Screen.xib in Resources */,
 				15FE07F91E26BAB500C456D5 /* Assets.xcassets in Resources */,
 				15FE07F71E26BAB500C456D5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		15FE08001E26BAB500C456D5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		15FE080B1E26BAB500C456D5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -331,7 +310,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				156FBA8D1E2A59FF0096A63B /* ContactUsViewController.m in Sources */,
+				B6F7055A1E2C734B005B5E42 /* ChartTableViewCell.m in Sources */,
 				152A7C931E272B3500FECE33 /* ActivityIndicator.m in Sources */,
+				B6F705571E2C734B005B5E42 /* XYPieChart.m in Sources */,
+				B6F705581E2C734B005B5E42 /* ChartViewController.m in Sources */,
 				15FE07F41E26BAB500C456D5 /* ViewController.m in Sources */,
 				15024BB91E2A87E60048DF51 /* TouchIDViewController.m in Sources */,
 				15024BBC1E2B3DF10048DF51 /* CacheManager.m in Sources */,
@@ -353,14 +335,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		15FE08091E26BAB500C456D5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				15FE08121E26BAB500C456D5 /* NahdiAppUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -368,11 +342,6 @@
 			isa = PBXTargetDependency;
 			target = 15FE07E81E26BAB500C456D5 /* NahdiApp */;
 			targetProxy = 15FE08031E26BAB500C456D5 /* PBXContainerItemProxy */;
-		};
-		15FE080F1E26BAB500C456D5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 15FE07E81E26BAB500C456D5 /* NahdiApp */;
-			targetProxy = 15FE080E1E26BAB500C456D5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -383,14 +352,6 @@
 				15FE07F61E26BAB500C456D5 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		15FE07FA1E26BAB500C456D5 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				15FE07FB1E26BAB500C456D5 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -491,6 +452,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NahdiApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.saurav.NahdiApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -503,6 +465,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NahdiApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.saurav.NahdiApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -534,28 +497,6 @@
 			};
 			name = Release;
 		};
-		15FE081D1E26BAB500C456D5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = NahdiAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.saurav.NahdiAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = NahdiApp;
-			};
-			name = Debug;
-		};
-		15FE081E1E26BAB500C456D5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = NahdiAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.saurav.NahdiAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = NahdiApp;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -582,15 +523,6 @@
 			buildConfigurations = (
 				15FE081A1E26BAB500C456D5 /* Debug */,
 				15FE081B1E26BAB500C456D5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		15FE081C1E26BAB500C456D5 /* Build configuration list for PBXNativeTarget "NahdiAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				15FE081D1E26BAB500C456D5 /* Debug */,
-				15FE081E1E26BAB500C456D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

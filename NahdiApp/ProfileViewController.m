@@ -14,6 +14,7 @@
 #import "TouchIDAuthentication.h"
 #import "UIAlertAction+AlertController.h"
 #import "CacheManager.h"
+#import "ChartViewController.h"
 
 @interface ProfileViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) IBOutlet UIView *profileView;
@@ -27,6 +28,9 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *designationLabel;
 @property (weak, nonatomic) IBOutlet UITableView *menuTableView;
+
+//ChartView
+@property (strong, nonatomic) IBOutlet UIView *chartView;
 @end
 
 @implementation ProfileViewController
@@ -56,7 +60,13 @@
     
     
 }
-
+-(void)viewWillAppear:(BOOL)animated
+{
+    ChartViewController *chartController = [[ChartViewController alloc]init];
+    [self addChildViewController:chartController];
+    [self.chartView addSubview:chartController.view];
+    
+}
 
 - (IBAction)slideButtonTapped:(UIBarButtonItem *)sender {
     

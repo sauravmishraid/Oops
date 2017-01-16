@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>CB2C3494-8E2B-4F47-A452-C9ECFCEAE6F2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>NahdiApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>80243F92B3A2C66257E3F8563D8C7C7A75BAB8DA</key>
+		<string>https://github.com/sauravmishraid/Oops.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>NahdiApp.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>80243F92B3A2C66257E3F8563D8C7C7A75BAB8DA</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/sauravmishraid/Oops.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>80243F92B3A2C66257E3F8563D8C7C7A75BAB8DA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>80243F92B3A2C66257E3F8563D8C7C7A75BAB8DA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Nahdi</string>
+		</dict>
+	</array>
+</dict>
+</plist>

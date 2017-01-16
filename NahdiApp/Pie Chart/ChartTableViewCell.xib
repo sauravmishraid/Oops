@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChartTableViewCell"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ChartTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="350"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HLh-Wk-oq8" customClass="XYPieChart">
+                    <rect key="frame" x="10" y="50" width="580" height="250"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="Z9j-AT-TDN"/>
+                        <constraint firstAttribute="width" constant="200" id="aIb-nP-wkh"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="we8-as-SDk"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Z9j-AT-TDN"/>
+                            <exclude reference="aIb-nP-wkh"/>
+                            <exclude reference="we8-as-SDk"/>
+                        </mask>
+                    </variation>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xZ-ZJ-zI8">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.949250252016129" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="HLh-Wk-oq8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="50" id="06w-aY-Lqm"/>
+                <constraint firstAttribute="trailing" secondItem="3xZ-ZJ-zI8" secondAttribute="trailing" id="2ea-tE-MB5"/>
+                <constraint firstItem="HLh-Wk-oq8" firstAttribute="top" secondItem="3xZ-ZJ-zI8" secondAttribute="bottom" constant="10" id="4Ai-EI-Lud"/>
+                <constraint firstItem="HLh-Wk-oq8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="Jd5-7z-JMe"/>
+                <constraint firstAttribute="bottom" secondItem="HLh-Wk-oq8" secondAttribute="bottom" constant="50" id="NSX-ea-8eg"/>
+                <constraint firstAttribute="trailing" secondItem="HLh-Wk-oq8" secondAttribute="trailing" constant="10" id="RBJ-ql-eGv"/>
+                <constraint firstItem="3xZ-ZJ-zI8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="TUo-N4-a8o"/>
+                <constraint firstItem="3xZ-ZJ-zI8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="XXA-eI-3ry"/>
+                <constraint firstAttribute="trailing" secondItem="HLh-Wk-oq8" secondAttribute="trailing" constant="10" id="lee-1X-3iD"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="RBJ-ql-eGv"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="pieChart" destination="HLh-Wk-oq8" id="7pg-tw-WLF"/>
+                <outlet property="titleLabel" destination="3xZ-ZJ-zI8" id="3SE-hb-PaK"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="-151"/>
+        </view>
+    </objects>
+</document>
